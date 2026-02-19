@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaCart Admin</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">NovaCart Admin</div>
+      <nav>
+        <a href="/">Storefront</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="label">Admin Backend</p>
+        <h1>Manage products from one dashboard.</h1>
+        <p>Add new products or remove existing ones using your admin token.</p>
+      </section>
+
+      <section class="categories" style="margin-bottom: 1.2rem">
+        <article>
+          <h3>Authentication</h3>
+          <p>Provide your admin token to perform CRUD actions.</p>
+        </article>
+        <article>
+          <h3>Product Control</h3>
+          <p>Create and delete products instantly.</p>
+        </article>
+      </section>
+
+      <section class="product" style="margin-bottom: 1.2rem">
+        <h3>Admin Token</h3>
+        <input id="admin-token" class="admin-input" placeholder="Enter admin token" />
+      </section>
+
+      <section class="product" style="margin-bottom: 1.2rem">
+        <h3>Add Product</h3>
+        <div class="admin-form-grid">
+          <input id="name" class="admin-input" placeholder="Name" />
+          <input id="price" class="admin-input" placeholder="Price" type="number" step="0.01" />
+          <input id="image" class="admin-input" placeholder="Image URL" />
+          <textarea id="desc" class="admin-input" placeholder="Description"></textarea>
+        </div>
+        <button id="create-product" class="checkout" style="margin-top: 0.8rem; width: fit-content">Create Product</button>
+      </section>
+
+      <section class="products-wrap">
+        <h2>Current Products</h2>
+        <ul id="admin-product-list" class="cart-items"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>Admin API endpoints: GET/POST /api/admin/products, DELETE /api/admin/products/:id</p>
+    </footer>
+
+    <script src="admin.js"></script>
+  </body>
+</html>

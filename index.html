@@ -1,34 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>orbit loader animation</title>
-    <link rel="stylesheet" href="style.css"
-</head>
-<body>
-    <!-- Spinner orbits -->
-    <div class="spinner-box">
-        <div class="blue-orbit leo">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaCart | Luxury Black & White Store</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">NovaCart</div>
+      <nav>
+        <a href="#products">Products</a>
+        <a href="#categories">Categories</a>
+        <a href="#about">About</a>
+        <a href="/admin">Admin</a>
+      </nav>
+      <button id="cart-toggle" class="cart-button" aria-label="Open cart">
+        Cart <span id="cart-count">0</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="label">Weekend Launch Offer</p>
+          <h1>Luxury essentials in timeless black and white.</h1>
+          <p>
+            Discover curated pieces with a premium monochrome aesthetic for modern living.
+          </p>
+          <a href="#products" class="cta">Shop Now</a>
         </div>
-    
-       <div class="green-orbit leo">
-       </div>
-    
-       <div class="red-orbit leo">
-    
-       </div>
-      <div class="white-orbit w1 leo">
-    
-      </div>
+      </section>
 
-      <div class="white-orbit w2 leo">
+      <section id="categories" class="categories">
+        <article>
+          <h3>Electronics</h3>
+          <p>Headphones, smartwatches, and accessories.</p>
+        </article>
+        <article>
+          <h3>Home Living</h3>
+          <p>Modern essentials for comfort and function.</p>
+        </article>
+        <article>
+          <h3>Fitness</h3>
+          <p>Gear to keep your wellness goals on track.</p>
+        </article>
+      </section>
 
-      </div>
-      <div class="white-orbit w3 leo">
+      <section id="products" class="products-wrap">
+        <h2>Featured Products</h2>
+        <div id="product-grid" class="products-grid"></div>
+      </section>
+    </main>
 
+    <aside id="cart-panel" class="cart-panel" aria-hidden="true">
+      <div class="cart-head">
+        <h3>Your Cart</h3>
+        <button id="close-cart" aria-label="Close cart">✕</button>
       </div>
-      
-    </div>
-</body>
+      <ul id="cart-items" class="cart-items"></ul>
+      <div class="cart-foot">
+        <p>Total: <strong id="cart-total">$0.00</strong></p>
+        <button class="checkout">Checkout</button>
+      </div>
+    </aside>
+
+    <footer id="about">
+      <p>NovaCart © 2026 · Built for smooth online shopping experiences.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
