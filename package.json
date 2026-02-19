@@ -1,0 +1,10 @@
+{
+  "name": "novacart",
+  "version": "1.0.0",
+  "description": "Luxury storefront with admin backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  }
+}
